@@ -1,0 +1,49 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header styling */
+  .header {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    padding: 20px;
+    background-color: #F8F8F8;
+    color: #5E5E5E;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 50px;  /* Adjust this to the size of your logo */
+    height: auto;
+    margin-right: 15px; /* Spacing between the logo and title */
+  }
+  
+  .title {
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      padding: 15px;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .logo-image {
+      width: 40px;  /* Adjust logo size for smaller screens */
+    }
+  }
+  

@@ -1,0 +1,197 @@
+/* General Container */
+.container {
+  max-width: 1400px; /* Equivalent to max-w-7xl */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+}
+
+.meme-generator-container {
+  padding: 25px;
+}
+
+/* Heading */
+.meme-generator-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Layout */
+.meme-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px; /* Space between input fields and image preview */
+  justify-content: flex-start; /* Align everything to the left */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Input Section */
+.input-section {
+  width: 42%;
+  min-width: 300px; /* Ensures input section does not shrink too much */
+}
+
+.input-section input[type="file"] {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.input-section input[type="text"] {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-section .button-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.input-section .button-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.input-section .button-container .generate-button {
+  background-color: #428BCA;
+  color: white;
+}
+
+.input-section .button-container .download-button {
+  background-color: #428BCA;
+  color: white;
+}
+
+.input-section .button-container button:hover {
+  opacity: 0.8;
+}
+
+/* Image Preview Section */
+.image-preview-container {
+  /* border: 1px solid #ccc; */
+  position: relative;
+  display: inline-block;
+  max-width: 100%; /* Ensure it doesn't overflow on smaller screens */
+}
+
+
+.image-preview-container button {
+  position: absolute;
+  top: -25px;
+  right: -32px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.create-meme-title{
+  margin-bottom: 26px;
+}
+.columns{
+  margin-top: 20px;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  /* Adjust layout for tablets and smaller screens */
+  .meme-layout {
+    flex-direction: column; /* Stack the input section and image preview */
+    gap: 30px;
+  }
+
+  .input-section {
+    width: 100%; /* Input fields take full width */
+  }
+
+  .input-section input[type="text"],
+  .input-section input[type="file"] {
+    font-size: 16px; /* Adjust font size for better readability */
+  }
+
+  .input-section .button-container button {
+    width: 48%; /* Buttons take half the width each */
+    font-size: 14px; /* Adjust button font size */
+  }
+
+  .image-preview-container {
+    margin: 0; /* No default centering */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Adjust layout for very small screens (mobile) */
+  .input-section .button-container {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+  }
+
+  .input-section .button-container button {
+    width: 100%; /* Buttons take full width */
+  }
+}
+
+/* Style the pagination container */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+/* Style individual pagination buttons */
+.pagination li {
+  margin: 0 5px;
+}
+
+/* Style the button links */
+.pagination a, .pagination button {
+  padding: 10px 15px;
+  background-color: white;
+  color: #428BCA;
+  border: 1px solid #dddada;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.2s;
+  text-decoration: none; /* Prevent underline on links */
+}
+
+/* Hover effect for the pagination buttons */
+.pagination a:hover, .pagination button:hover {
+  background-color: #f2f2f2;
+  transform: scale(1.1);
+}
+
+/* Style the active page button */
+.pagination .active a, .pagination .active button {
+  background-color: #428BCA;
+  color: white;
+}
+
+/* Style for disabled buttons (next, previous) */
+.pagination .disabled a, .pagination .disabled button {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
